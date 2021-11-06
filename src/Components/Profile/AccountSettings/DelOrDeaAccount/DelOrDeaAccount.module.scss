@@ -1,0 +1,44 @@
+@import "src/Components/Styles/variables";
+
+.delOrDeaTitle {
+  color: $text-gray;
+  margin: 0;
+}
+.delOrDeaDetails {
+  color: $gray-600;
+  margin: 20px 0 70px 0;
+  line-height: 150%;
+}
+.delOrDeaLabel{
+  margin: 0;
+}
+.delOrDeaSelect{
+  margin: 35px 0;
+  width: 50%;
+}
+.delOrDeaModalWrapper{
+  min-height: inherit !important;
+  padding: 0 60px;
+  box-sizing: border-box;
+  .delOrDeaModalContentWrapper {
+    width: 550px;
+    padding: 50px 0;
+    box-sizing: border-box;
+    .delOrDeaModalContentTitle{
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      line-height: 42px;
+    }
+    .delOrDeaModalContentDescription{
+      width: 350px;
+      line-height: 1.5em;
+      margin: 20px 0;
+      text-align: center;
+    }
+    button{
+      width: 350px;
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.successCard {
+  height: 350px;
+  width: 650px;
+  position: relative;
+
+  img {
+    position: absolute;
+  }
+
+  .cardOverlay {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    background-color: rgba(51, 119, 255, 0.5);
+    width: 100%;
+    color: #ffffff;
+    backdrop-filter: blur(24px);
+
+    i {
+      margin-right: 5px;
+    }
+
+    h5 {
+      margin: 10px;
+    }
+
+    p {
+      color: #ffffff !important;
+      margin-right: 10px;
+      font-size: 10px !important;
+    }
+  }
+
+  .actionSection {
+    i {
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}

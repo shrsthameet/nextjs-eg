@@ -1,0 +1,113 @@
+@import '../../Styles/variables';
+
+.button {
+  cursor: pointer;
+  padding: 0 2rem;
+  border-radius: $border-radius-lg;
+  font-weight: 700;
+  font-family: $font-default;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 175px;
+  min-height: 50px;
+  svg{
+    margin-left: 5px;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled{
+    border: inherit;
+  }
+
+  @media (max-width: $screen-md) {
+    padding: 1.2rem 3.5rem;
+    font-size: 1.8rem;
+  }
+
+  &.primary {
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    color: $white;
+    &:hover {
+      background-color: lighten($button-color, 10%);
+    }
+    &.disabled{
+      background-color: $disabled;
+      color: $white;
+      border: 1px solid $disabled;
+    }
+  }
+
+  &.text {
+    background-color: transparent;
+    border: none;
+    color: $text-gray;
+    &:hover {
+      color: lighten($text-gray, 10%);
+    }
+    &.disabled{
+      color: $disabled;
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    border: 1px solid $button-color;
+    color: $button-color;
+    &:hover {
+      color: lighten($button-color, 10%);
+    }
+    &.disabled{
+      color: $disabled;
+      border: 1px solid $disabled;
+    }
+  }
+
+  &.navGray {
+    background-color: $button-gray;
+    border: 1px solid $button-gray;
+    color: $white;
+    font-weight: 400;
+    &:hover {
+      background-color: lighten($button-gray, 10%);
+    }
+    &.disabled{
+      background-color: $disabled;
+      border: 1px solid $disabled;
+    }
+  }
+
+  &.navBlue {
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    color: $white;
+    font-weight: 400;
+    &:hover {
+      color: lighten($button-color, 10%);
+    }
+    &.disabled{
+      background-color: $disabled;
+      border: 1px solid $disabled;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  &.loading{
+    opacity: 0.5;
+    cursor: progress;
+  }
+
+  .buttonSpinner{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}

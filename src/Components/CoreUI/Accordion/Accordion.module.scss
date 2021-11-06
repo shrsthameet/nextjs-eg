@@ -1,0 +1,65 @@
+@import "../../Styles/variables";
+
+.accordionContainer {
+  font-family: $font-mulish;
+  background: $white;
+  margin-bottom: 15px;
+  height: 80px;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 20px;
+  width: 100%;
+  padding: 0 35px 0 50px;
+  box-sizing: border-box;
+  .accordionTitle {
+    align-items: center;
+    margin: 0;
+    cursor: pointer;
+    height: 80px;
+    &.accordionTitleGray{
+      color: $gray-600;
+    }
+    *{
+      margin: 0;
+    }
+    .iconWrapper{
+      &.expand {
+        animation: clockwise 0.5s forwards;
+      }
+      &.shrink {
+        animation: anti-clockwise 0.5s forwards;
+      }
+    }
+
+    @keyframes clockwise {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(180deg);
+      }
+    }
+
+    @keyframes anti-clockwise {
+      from {
+        transform: rotate(180deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  .accordionContent{
+    opacity: 0;
+    transition: 0.5s;
+    margin: 0;
+    padding: 0 25px;
+    box-sizing: border-box;
+    h6{
+      color: $gray-600;
+      letter-spacing: 0.57px;
+      margin: 0;
+      line-height: 40px;
+    }
+  }
+}

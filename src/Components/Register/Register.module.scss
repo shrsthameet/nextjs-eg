@@ -1,0 +1,217 @@
+.registerContainer {
+  //   background-color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   height: 100vh;
+  flex-direction: column;
+
+  .cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .card {
+    border: "1px solid black";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #faf7f7;
+    border-radius: 5px;
+    width: 239px;
+    height: 275px;
+
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(250, 247, 247, 0.6);
+    }
+  }
+
+  .inputWrapStyle {
+    position: relative;
+    width: 550px;
+    height: 150px;
+
+    input {
+      position: absolute;
+      padding: 10px 20px 10px 20px;
+      width: 480px;
+      height: 60px;
+      border-radius: 10px;
+      border: none;
+      transform-origin: top center;
+      box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
+
+      &:focus {
+        outline: 0;
+        // box-shadow: 0 5px 15px 0.04rem grey;
+        box-shadow: 0 0 0 0.06rem rgb(116, 113, 113);
+      }
+
+      &::placeholder {
+        color: rgb(189, 186, 186);
+        font-size: 15px;
+        letter-spacing: 0.04rem;
+      }
+    }
+
+    select {
+      position: absolute;
+      padding: 10px 20px 10px 20px;
+      //   width: 540px !important;
+      //   height: 80px;
+      border-radius: 10px;
+      border: none;
+      transform-origin: top center;
+      box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
+
+      &:focus {
+        outline: 0;
+        // box-shadow: 0 5px 15px 0.04rem grey;
+        box-shadow: 0 0 0 0.06rem rgb(116, 113, 113);
+      }
+    }
+  }
+
+  .verificationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+// .termsAndConditions {
+//   background: #ffffff;
+//   display: flex;
+//   flex-direction: column;
+//   padding: 40px;
+//   border-radius: 10px;
+//   width: 100%;
+//   //   height: 75%;
+
+//   .detail {
+//     overflow: scroll;
+//     height: 300px;
+//     border: none;
+//     overflow-x: hidden;
+//   }
+
+//   .button {
+//     padding: 10px 20px 10px 20px;
+//     border-radius: 30px;
+//     background: #0275d8;
+//     border: none;
+//     color: #ffffff;
+//     letter-spacing: 0.05rem;
+//     cursor: pointer;
+
+//     &:hover {
+//       outline: 0;
+//       background-color: rgba(2, 117, 216, 0.8);
+//     }
+
+//     &:disabled {
+//       background: #c4c4c4;
+//       color: rgb(116, 113, 113);
+//       cursor: not-allowed;
+//     }
+//   }
+// }
+
+// Motion input wrapper and input field style
+.motionInputWrapper {
+  position: relative;
+  width: 520px;
+  height: 250px;
+
+  .motionInputStyle {
+    left: 0;
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    width: 480px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    transform-origin: top center;
+    box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
+    font-size: 20px;
+    color: rgb(102, 97, 97);
+
+    &:focus {
+      outline: 0;
+      //   box-shadow: 0 5px 15px 0.04rem grey;
+      box-shadow: 0 0 0 0.06rem rgb(116, 113, 113);
+    }
+
+    &::placeholder {
+      color: rgb(189, 186, 186);
+      font-size: 20px;
+      letter-spacing: 0.04rem;
+    }
+  }
+
+  .motionSelectStyle {
+    left: 0;
+    position: absolute;
+    padding: 10px 20px 10px 20px;
+    width: 520px;
+    height: 75px;
+    border-radius: 10px;
+    border: none;
+    transform-origin: top center;
+    box-shadow: 2px 5px 10px rgb(0 0 0 / 0.2);
+    font-size: 20px;
+    color: rgb(102, 97, 97);
+
+    &:focus {
+      outline: 0;
+      //   box-shadow: 0 5px 15px 0.04rem grey;
+      box-shadow: 0 0 0 0.06rem rgb(116, 113, 113);
+    }
+
+    &::placeholder {
+      color: rgb(189, 186, 186);
+      font-size: 20px;
+      letter-spacing: 0.04rem;
+    }
+  }
+
+  .detail {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    // text-align: center !important;
+
+    p {
+      font-size: 16px;
+      letter-spacing: 0.05rem;
+    }
+
+    a {
+      color: black !important;
+    }
+
+    span {
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: rgba(2, 117, 216, 0.8);
+      }
+    }
+
+    span {
+      color: #000000;
+      cursor: pointer;
+
+      &:hover {
+        color: rgba(2, 117, 216, 0.8);
+      }
+    }
+  }
+}

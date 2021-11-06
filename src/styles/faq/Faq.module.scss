@@ -1,0 +1,17 @@
+@import "src/Components/Styles/variables";
+
+.faqPageWrapper{
+  padding: $common-padding;
+  color: $text-gray !important;
+  .faqWrapper{
+    width: 70%;
+    margin: auto;
+    .faqTitle{
+      margin: 0;
+    }
+    .faqAccTitle{
+      margin: 70px 0 20px 0;
+    }
+  }
+
+}

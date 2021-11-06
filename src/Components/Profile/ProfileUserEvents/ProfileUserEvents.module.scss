@@ -1,0 +1,77 @@
+@import "src/Components/Styles/variables";
+.profileEventWrapper{
+  box-shadow: $shadow-base;
+  padding: 35px 45px;
+  margin-bottom: 50px;
+  z-index: 1;
+  background: $auth-background;
+  border-radius: 17px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $white;
+  position: relative;
+  .profileEventAddNew{
+    position: absolute;
+    right: 45px;
+    top: 35px;
+    z-index: 1;
+  }
+  .profileEventCardScrollContainer{
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    padding-bottom: 50px;
+    .profileEventCardContainer{
+      .profileEventCardWrapper{
+        height: 350px;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 24.5%;
+        margin: 0 0.5% 0 0;
+        position: relative;
+        color: $white;
+        &.profileEventCardLast{
+          margin: 0;
+        }
+        .profileEventCardImage{
+          position: relative;
+          height: 100%;
+          width: 100%;
+        }
+        .profileEventCardContentBlur{
+          width: 100%;
+          height: 130px;
+          position: absolute;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.2);
+          backdrop-filter: blur(5px);
+        }
+        .profileEventCardContentWrapper{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          background: transparentize($button-color, 0.5);
+          padding: 10px 15px;
+          cursor: pointer;
+          height: 130px;
+          .profileEventCardTagWrapper{
+            margin-bottom: 10px;
+            .profileEventCardTag{
+              background: transparentize($white, 0.75);
+              padding: 5px 15px;
+              border-radius: 5px;
+              border: 1px solid transparentize($white, 0.25);
+              font-size: 14px;
+              font-weight: 700;
+              margin-right: 20px;}
+          }
+          .profileEventCardTitle{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+}

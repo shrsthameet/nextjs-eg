@@ -1,0 +1,90 @@
+@import "../Styles/variables";
+
+.landingPageFooterWrapper{
+  padding: 80px 7%;
+  background: $button-color;
+  color: $white;
+  min-height: 550px;
+  margin-top: -4vh;
+  .landingPageFooterContentWrapper{
+    width: 22%;
+    &.landingPageFooterFirstContent{
+      width: 34%;
+      .landingPageFooterCompanyDetails{
+        line-height: 30px;
+        margin: 0;
+      }
+    }
+    .landingPageFooterContentTitle{
+      margin: 0 0 30px 0;
+      color: #FFD2DD;
+    }
+    .landingPageFooterContentNavWrapper{
+      .landingPageFooterContentNav{
+        margin-bottom: 30px;
+        &:hover{
+          color: darken($white, 10%);
+        }
+      }
+    }
+  }
+  .landingPageFooterBottomWrapper{
+    h5{
+      margin: 0;
+    }
+    .landingPageFooterBottomNav{
+      margin-right: 60px;
+      &:hover{
+        color: darken($white, 10%);
+      }
+    }
+    .landingPageFooterBottomSocialNav{
+      margin-left: 60px;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+
+.authFooterWrapper{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 50px;
+  box-sizing: border-box;
+  .authFooterLinksWrapper{
+    width: 25%;
+    .authFooterLinks{
+      font-size: 1.125rem;
+      color: $gray-600;
+      margin-right: 30px;
+    }
+  }
+  .authFooterLogoLabel{
+    margin: 0;
+    color: $text-gray;
+  }
+  .authFooterLogoWrapper{
+    margin-top: 20px;
+    background-color: $white;
+    border-radius: 10px 10px 0 0;
+    padding: 30px;
+    box-sizing: border-box;
+    .authFooterLogo{
+      margin: 0 20px;
+      cursor: pointer;
+      svg{
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+  .authFooterCopyRight{
+    width: 25%;
+    text-align: right;
+    font-size: 1.125rem;
+    color: $gray-600;
+  }
+}

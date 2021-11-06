@@ -1,0 +1,39 @@
+@import "src/Components/Styles/variables";
+
+.eduOrExpCardWrapper{
+  box-shadow: $shadow-base;
+  border: 1px solid $white;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  .eduOrExpCardImage{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-right: 30px;
+  }
+  .eduOrExpCardTitle{
+    margin: 3px 0;
+    color: $text-gray;
+  }
+  .eduOrExpCardSubTitle{
+    margin: 3px 0;
+    color: $gray-600;
+  }
+  .eduOrExpCardDate{
+    color: $gray-600;
+    margin: 0;
+  }
+  .eduOrExpCardButtonWrapper{
+    button{
+      min-width: inherit;
+      padding: 0 10px;
+      background: #DCE0E7;
+      min-height: 36px;
+      margin-left: 10px;
+      svg{
+        margin: 0 5px;
+      }
+    }
+  }
+}

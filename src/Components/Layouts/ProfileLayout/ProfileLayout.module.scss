@@ -1,0 +1,17 @@
+@import "src/Components/Styles/variables";
+
+.profileWrapper{
+  padding: $common-padding;
+  height: 100%;
+  &.profileContentMarginBottom{
+    margin-bottom: 100px;
+  }
+  .profileUserInfoWrapper{
+    width: 20%;
+    position: relative;
+  }
+  .profileContentWrapper{
+    width: 76%;
+    min-height: 81vh;
+  }
+}

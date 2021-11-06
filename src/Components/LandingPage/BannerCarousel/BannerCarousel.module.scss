@@ -1,0 +1,37 @@
+@import "src/Components/Styles/variables";
+
+.landingPageBannerWrapper{
+  height: 100%;
+  width: 100%;
+  .landingPageBannerContentWrapper{
+    padding: $common-padding;
+    height: 100%;
+    width: 100%;
+    color: $text-gray;
+    .landingPageBannerLeft{
+      width: 60%;
+      height: 80%;
+      .landingPageBannerHeading{
+        width: 70%;
+        &:first-line{
+          font-weight: 800;
+        }
+      }
+      .landingPageBannerParagraph{
+        width: 50%;
+        line-height: 28px;
+        margin: 20px 0;
+      }
+      .landingPageBannerButtonWrapper{
+        button{
+          margin-right: 25px;
+        }
+      }
+    }
+    .landingPageBannerRight{
+      width: 40%;
+      height: 100%;
+      position: relative;
+    }
+  }
+}

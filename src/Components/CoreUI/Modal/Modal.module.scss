@@ -1,0 +1,66 @@
+@import "src/Components/Styles/variables";
+
+.modalBackground {
+  height: 100vh;
+  background: transparentize($white, 0.75);
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 0.25s;
+  .modalContainer {
+    margin: 0;
+    min-width: 400px;
+    min-height: 300px;
+    height: auto;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    position: relative;
+    transform: scale(0);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    .modalCloseBar {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      border: none;
+      background: transparent;
+      outline: none;
+      padding: 0;
+      font-size: $font-size-lg;
+      cursor: pointer;
+    }
+    .modalTitle {
+      height: 100px;
+      padding: 0 15px;
+      border-bottom: 2px solid lightgray;
+    }
+    .modalBody {
+      min-height: 200px;
+      padding: 10px 15px;
+      box-sizing: border-box;
+    }
+    .modalFooter {
+      border-top: 2px solid lightgray;
+      height: 100px;
+      padding: 0 15px;
+      button{
+        min-width: 100px;
+        padding: 5px 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+  &.showModal {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+    .modalContainer{
+      transform: scale(1.0);
+      transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "src/Components/Styles/variables";
+
+.profileLabelInputWrapper{
+  color: $text-gray;
+  min-height: 60px;
+  margin-bottom: 45px;
+  .profileLabel{
+    width: 300px;
+    margin: 0 10px 0 0 ;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    font-size: $font-size-md;
+    .verifiedMark{
+      height: 20px;
+      width: 20px;
+      border-radius: 20px;
+      background: $success;
+      margin-left: 10px;
+    }
+  }
+  .profileUnEditableValue{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    font-size: $font-size-md;
+  }
+  .profileInput{
+    width: 500px;
+    &.profileDateInput{
+      width: 240px;
+      margin-right: 20px;
+    }
+    &.profilePhoneNumber{
+      display: flex;
+    }
+  }
+  .profileRadioButton{
+    min-width: 100px;
+    margin-right: 20px;
+  }
+  .profileCheckBoxWrapper{
+    margin-top: 10px;
+    color: $gray-700;
+    input{
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+  select{
+    height: 50px;
+  }
+}
+
+.addNewButton{
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  span{
+    font-size: 2rem;
+    margin-right: 10px;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,54 @@
+@import "src/Components/Styles/variables";
+.otpWrapper{
+  .otpForm{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .otpInput{
+      width: 90px;
+      height: 90px;
+      outline: none;
+      appearance: none;
+      color: black;
+      text-align: center;
+      border: 0;
+      font-size: $font-size-xl;
+      border-radius: $input-border-radius-lg;
+      background: $white;
+      box-shadow: 0 8px 25px 0 #0000001A;
+      margin: 0 15px;
+      &:hover,
+      &:focus-within,
+      &.codeEntered {
+        border: 1px solid black;
+      }
+      &.codeError {
+        border: 1px solid $red
+      }
+    }
+  }
+  .otpError{
+    color: $red;
+    margin: 0;
+    font-size: $font-size-sm;
+    font-weight: 400;
+  }
+  .otpResendLabel{
+    color: $auth-topic-color;
+    margin: 15px 0;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    .otpResendAction {
+      font-weight: 700;
+      cursor: pointer;
+      &:hover,
+      &:focus-within{
+        color: darken($auth-topic-color, 20);
+      }
+      &.otpResendDisabled {
+        color: lighten($auth-topic-color, 40);
+        cursor: not-allowed;
+      }
+    }
+  }
+}

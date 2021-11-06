@@ -1,0 +1,58 @@
+@import "src/Components/Styles/variables";
+
+$card-logo-color: url(#paint0_linear_4009:7297);
+
+.userTypeSelectionWrapper{
+  background: $auth-background;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: $font-mulish !important;
+  position: relative;
+  padding: 50px;
+  color: $text-gray;
+  .userTypeSelectionLogo{
+    svg{
+      height: 80px;
+    }
+    margin-bottom: 25px;
+  }
+  .userTypeSelectionTitle{
+    margin: 0;
+  }
+  .userTypeSelectionDescription{
+    margin: 16px 0 0 0;
+    width: 55%;
+    color: $gray-600;
+    font-size: $font-size-md;
+    line-height: $font-size-md + 0.4;
+  }
+  .userTypeSelectionTopic{
+    margin: 30px 0;
+  }
+  .userTypeSelectionCard{
+    height: 275px;
+    width: 240px;
+    border-radius: 20px;
+    background-color: $white;
+    margin: 0 17px;
+    cursor: pointer;
+    svg{
+      fill: $card-logo-color;
+    }
+    &:hover{
+      background-color: $button-color;
+      color: $white;
+      svg{
+        fill: $white;
+      }
+    }
+  }
+  .userTypeSelectionLink{
+    margin: 30px 0;
+    a{
+      font-size: $font-size-md;
+      font-weight: 700;
+    }
+  }
+}

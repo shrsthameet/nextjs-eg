@@ -1,0 +1,40 @@
+.sendUpdatesContainer {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #f7f7f7;
+
+  .sendUpdatesWrapper {
+    padding: 40px 20px 40px 20px;
+    width: 90%;
+
+    .infoSection {
+      flex: 2;
+      padding: 20px 20px 20px 0;
+
+      h6 {
+        margin: 0;
+        font-weight: bold;
+      }
+    }
+
+    .formSection {
+      flex: 2;
+
+      .form {
+        gap: 20px;
+        width: 100%;
+
+        .inputStyle {
+          margin: 0 !important;
+          padding: 0 !important;
+          height: 50px !important;
+          background-color: khaki;
+
+          ::placeholder {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

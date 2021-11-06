@@ -1,0 +1,59 @@
+@import "../../Styles/variables";
+
+.questionScreenWrapper{
+  width: 100%;
+  height: 70%;
+  .questionScreenQuestion{
+    font-size: 80px;
+    font-style: normal;
+    line-height: 89px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    margin-top: 0;
+    &::first-line{
+      font-weight: 900;
+    }
+    @media screen and (max-width: $screen-sm) {
+      width: 500px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @media screen and (min-width: $screen-sm) {
+      width: 500px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+    @media screen and (min-width: $screen-md) {
+      width: 650px;
+      font-size: 60px;
+      line-height: 67px;
+    }
+    @media screen and (min-width: $screen-xl) {
+      width: 1000px;
+      font-size: 70px;
+      line-height: 77px;
+    }
+    @media screen and (min-width: $screen-xxl) {
+      width: $screen-xxl * 0.80;
+      font-size: 80px;
+      line-height: 89px;
+    }
+  }
+  .questionScreenAnswersWrapper{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    .questionScreenAnswers{
+      position: relative;
+      .questionScreenAnswer{
+        margin-right: 50px;
+      }
+    }
+  }
+
+  .questionScreenInput{
+    margin-top: 40px;
+    width: 35%;
+    height: 65px;
+  }
+}

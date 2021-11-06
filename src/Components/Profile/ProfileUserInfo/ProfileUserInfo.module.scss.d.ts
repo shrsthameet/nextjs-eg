@@ -1,0 +1,11 @@
+export const profileUserInfoWrapper:string
+export const profileUserInfoDetailsWrapper:string
+export const profileUserInfoBackgroundImage:string
+export const profileUserInfoContentWrapper:string
+export const profileUserInfoLoading: string
+export const profileUserInfoContentImage:string
+export const profileUserInfoContentDetail:string
+export const profileUserInfoSocialWrapper:string
+export const profileUserInfoSocialLink:string
+export const profileUserInfoEditButton:string
+

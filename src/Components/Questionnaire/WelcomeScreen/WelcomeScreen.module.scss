@@ -1,0 +1,28 @@
+@import "../../Styles/variables";
+
+.welcomeScreenWrapper {
+  padding: 0 18%;
+  text-align: center;
+  color: $text-gray;
+  height: 100vh;
+  background: $auth-background;
+  .welcomeScreenContentWrapper{
+    border: 1px solid $white;
+    box-sizing: border-box;
+    box-shadow: 0 59.9625px 133.25px rgba(5, 29, 61, 0.12);
+    border-radius: 20px;
+    padding: 60px 130px;
+    margin-bottom: 30px;
+    .welcomeScreenTitle{
+      margin: 0;
+    }
+    .welcomeScreenDescription{
+      width: 90%;
+      margin: auto;
+      color: $gray-600;
+      max-height: 220px;
+      overflow: hidden;
+      line-height: 22.5px;
+    }
+  }
+}

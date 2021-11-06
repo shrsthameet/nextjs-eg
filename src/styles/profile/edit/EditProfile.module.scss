@@ -1,0 +1,21 @@
+@import "src/Components/Styles/variables";
+
+.editProfileWrapper{
+  box-shadow: $shadow-base;
+  padding: 0 45px;
+  z-index: 1;
+  background: $auth-background;
+  border-radius: 17px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $white;
+  height: 80vh;
+  overflow: auto;
+  .editProfileTabWrapper{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $auth-background;
+  }
+}

@@ -1,0 +1,44 @@
+@import "src/Components/Styles/variables";
+
+.accountSettingsWrapper{
+  box-shadow: $shadow-base;
+  padding: 35px 45px;
+  z-index: 1;
+  background: $auth-background;
+  border-radius: 17px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $white;
+  height: 80vh;
+  overflow: auto;
+  button{
+    font-weight: normal;
+  }
+  form button{
+    margin: 50px 0 0 300px;
+  }
+  .accountSettingsFieldTitle{
+    letter-spacing: 0.05rem;
+    margin-bottom: 20px;
+  }
+  .accountSettingsFieldDescription{
+    font-size: $font-size-base;
+    line-height: $font-size-lg;
+    color: $gray-600;
+    width: 80%;
+    margin: 0 0 50px 0;
+  }
+  .accountSettingsLabelInputWrapper{
+    .accountSettingsLabel{
+      color: $gray-800;
+      width: 300px;
+    }
+    .accountSettingsUnEditableValue{
+      color: $black;
+    }
+    .accountSettingsInput{
+      width: 540px;
+      border-radius: 6px;
+    }
+  }
+}

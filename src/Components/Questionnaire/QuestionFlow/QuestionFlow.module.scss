@@ -1,0 +1,20 @@
+@import "src/Components/Styles/variables";
+
+.questionFlowProgressBar{
+  position: absolute;
+  top: 10px;
+  right: 70px;
+}
+.questionFlowWrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: $common-padding;
+  height: 100%;
+  overflow: hidden;
+}
+.questionFlowFooter {
+  width: 100%;
+  padding: 0 7%;
+  position: absolute;
+  bottom: 10vh;
+}

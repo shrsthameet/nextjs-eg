@@ -1,0 +1,83 @@
+@import "src/Components/Styles/variables";
+
+.profileUserContentWrapper{
+  color: $text-gray;
+  .profileUserContent{
+    box-shadow: $shadow-base;
+    padding: 35px 45px;
+    margin-bottom: 50px;
+    z-index: 1;
+    background: $auth-background;
+    border-radius: 17px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $white;
+    .profileUserContentTitle{
+      margin: 0 0 30px 0;
+      display: inline-flex;
+      justify-content: space-between;
+      width: 100%;
+      span{
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+    .profileUserAreaOfInterest{
+      width: 33.33%;
+      .profileUserCompanyLogo{
+        position: relative;
+        height: 50px;
+        width: 100px;
+        margin-right: 25px;
+      }
+    }
+    .profileUserPreferredSubjectWrapper{
+      overflow: auto;
+      padding-bottom: 40px;
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $gray-300;
+        border-radius: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $button-color;
+        border-radius: 8px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: $button-color;
+      }
+      .profileUserPreferredSubject{
+        background-color: $button-color;
+        color: $white;
+        font-size: $font-size-md;
+        padding: 16px 43px;
+        border-radius: 5px;
+        margin-right: 29px;
+        white-space: nowrap;
+      }
+    }
+    .profileUserCompanyWrapper{
+      margin-bottom: 20px;
+      .profileUserCompanyLogo{
+        position: relative;
+        height: 50px;
+        width: 50px;
+        margin-right: 25px;
+      }
+      .profileUserCompanyDetail{
+        border-bottom: 1px solid $white;
+        padding: 18px 0;
+        h5, p{
+          margin: 4px 0;
+        }
+        p{
+          color: $gray-600;
+        }
+      }
+    }
+  }
+}

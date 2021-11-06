@@ -1,0 +1,60 @@
+
+$light-primary: #662e9b;
+$light-secondary: #43bccd;
+$light-shade1: #FBF6F0 ;
+$light-shade2: #020F3D ;
+$light-shade3: #9812F5 ;
+$light-shade4: #ffffff;
+
+$dark-primary: #020F3D;
+$dark-secondary: #db5375;
+$dark-shade1: #020F3D ;
+$dark-shade2: #f5f5f5 ;
+$dark-shade3: #FCCB1A ;
+$dark-shade4: #454545;
+
+$themes: (
+        "light": (
+                "colors": (
+                        "primary": $light-primary,
+                        "secondary": $light-secondary
+                ),
+                "shades": (
+                        "shade-1": $light-shade1,
+                        "shade-2": $light-shade2,
+                        "shade-3": $light-shade3,
+                        "shade-4": $light-shade4,
+                )
+        ),
+        "dark": (
+                "colors": (
+                        "primary": $dark-primary,
+                        "secondary": $dark-secondary
+                ),
+                "shades": (
+                        "shade-1": $dark-shade1,
+                        "shade-2": $dark-shade2,
+                        "shade-3": $dark-shade3,
+                        "shade-4": $dark-shade4,
+                )
+        )
+);
+
+@each $theme-name, $theme-vars in $themes {
+  $shades: map-get($theme-vars, "shades");
+  $colors: map-get($theme-vars, "colors");
+
+  $theme: (
+          "bg-color": map-get($shades, "shade-1"),
+          "text-color": map-get($shades, "shade-2"),
+          "onFocus-color": map-get($shades, "shade-3"),
+          "bg-color-secondary": map-get($shades, "shade-4"),
+  );
+
+  .nonAuthLayoutContainer.#{$theme-name}{
+    // define a css variable for each theme color
+    @each $name, $color in $theme {
+      --#{$name}: #{$color};
+    }
+  }
+}

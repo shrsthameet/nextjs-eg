@@ -1,0 +1,87 @@
+@import "src/Components/Styles/variables";
+
+.profileUserInfoWrapper{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  .profileUserInfoDetailsWrapper{
+    width: 100%;
+    height: 500px;
+    background: #020F3D;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: $shadow-base;
+    z-index: 1;
+    .profileUserInfoBackgroundImage{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+      svg{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .profileUserInfoContentWrapper{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background: rgba(49, 49, 49, 0.5);
+      .profileUserInfoLoading{
+        width: 100px;
+        height: 100px;
+      }
+      .profileUserInfoContentImage{
+        position: relative;
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+        border-radius: 500px;
+        margin-bottom: 10px;
+        border: 2px solid whitesmoke;
+        svg{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .profileUserInfoContentDetail{
+        margin: 0 0 10px 0;
+        color: $white;
+      }
+      .profileUserInfoSocialWrapper{
+        margin: 10px 0 20px 0;
+        .profileUserInfoSocialLink{
+          height: 40px;
+          width: 40px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background: $white;
+          border-radius: 500px;
+          margin: 0 5px;
+          cursor: pointer;
+          svg{
+            height: 50%;
+            width: 50%;
+          }
+        }
+      }
+      .profileUserInfoEditButton{
+        background: #FFFFFF;
+        border: 0.830239px solid rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+        box-shadow: $shadow-base;
+        border-radius: 20px;
+        color: $gray-800;
+        font-weight: normal;
+        font-size: 11px;
+        min-width: initial;
+        padding: 10px 24px;
+      }
+    }
+  }
+}
+

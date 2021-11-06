@@ -1,0 +1,302 @@
+@use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+$white: #ffffff;
+$gray-100: #f9fafb; // $gray-lightest
+$gray-200: #EEF1F6; // $gray-lighter
+$gray-300: #DAD7D7; // $gray-light
+$gray-400: #C4C4C4;
+$gray-500: #adb5bd;
+$gray-600: #969696;
+$gray-700: #636363; // $gray
+$gray-800: #4e5154;
+$gray-900: #3a3a3c;// $gray-dark
+$black: #0A0A0A;
+
+$info: #00cfe8; //$info
+$danger: #ea5455; //$danger
+$warning: #ff9f43; //$warning
+$success: #65BF73; //$success
+
+$disabled: #adb5bd; //disabled
+
+// colors
+$text-gray: #404852;
+$text-wash: #cccfd8;
+$wash: #FAF7F7;
+$yellow: #ffc723;
+$yellow-wash: #fefae9;
+$red: #ff394f;
+$red-wash: #ffebed;
+$purple: #9812f5;
+$purple-light: #D117CC;
+$purple-wash: #f5e7fe;
+$blue: #2833ff;
+$blue-wash: #eaebff;
+
+$gradient-vertical: linear-gradient(
+  180deg,
+  rgba(255, 57, 79, 1) 25%,
+  rgba(209, 23, 204, 1) 50%,
+  rgba(152, 18, 245, 1) 75%,
+  rgba(40, 51, 255, 1) 100%
+);
+
+$gradient-conic: conic-gradient(
+  from 194.03deg at 50% 45.93%,
+  #2833FF -15.81deg,
+  rgba(152, 18, 245, 0.8) 15.55deg,
+  #EF2D5B 101.21deg,
+  #FFC723 175.25deg,
+  #FFC723 212.12deg,
+  #FF394F 251.63deg,
+  #EA2A89 281.05deg,
+  #2833FF 344.19deg,
+  rgba(152, 18, 245, 0.8)
+  375.55deg
+);
+
+// Padding
+$common-padding: 0 7%;
+
+// stylelint-disable
+$spacer: 1rem;
+$spacers: ();
+
+// button
+$button-color: #3377FF;
+$button-gray: #979797;
+
+  // fonts
+$font-default: 'Basic Sans', sans-serif;
+$font-roboto: 'Roboto', serif;
+$font-mulish: 'Mulish', serif;
+
+$font-size-base: 1rem;
+
+$font-size-sm: $font-size-base * 0.85;
+$font-size-md: $font-size-base * 1.375;
+$font-size-lg: $font-size-base * 1.5;
+$font-size-xl: $font-size-base * 2.5;
+$font-size-xxl: $font-size-base * 3.5;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+
+$headings-margin-bottom: math.div($spacer, 2);
+$headings-font-family: $font-default;
+$headings-font-weight: 600;
+
+$headings-color: $black;
+
+// shadows
+$shadow-base: 0 59.9625px 133.25px rgba(5, 29, 61, 0.12);
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    25: (
+      $spacer * 0.25,
+    ),
+    50: (
+      $spacer * 0.5,
+    ),
+    75: (
+      $spacer * 0.75,
+    ),
+    1: (
+      $spacer,
+    ),
+    2: (
+      $spacer * 1.5,
+    ),
+    3: (
+      $spacer * 3,
+    ),
+    4: (
+      $spacer * 3.5,
+    ),
+    5: (
+      $spacer * 4,
+    ),
+  ),
+  $spacers
+);
+
+$link-color: $blue;
+$link-hover-color: darken($link-color, 20%);
+$link-hover-decoration: none;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 28px;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg: 1.25;
+$line-height-sm: 1;
+
+$border-width: 1px;
+$border-color: $gray-800;
+$border-radius: 0.5rem;
+$border-radius-sm: 0.25rem;
+$border-radius-lg: 0.75rem;
+$border-radius-circle: 500px;
+
+// Buttons + Forms
+$btn-padding-y: 0.9rem;
+$btn-padding-x: 2rem;
+
+$btn-line-height: 1;
+$input-btn-border-width: 0;
+$btn-border-radius: 0.30rem;
+
+// Forms
+//default
+$input-height: 5em;
+$input-width: 31.25em;
+$input-padding-x: 1.5rem;
+$input-font-size: $font-size-md;
+$input-line-height: 1.25rem;
+$input-border-radius: 10px;
+
+//small
+$input-height-sm: 3.75em;
+$input-width-sm: 28em;
+$input-padding-x-sm: 1.25rem;
+$input-font-size-sm: $font-size-base;
+$input-line-height-sm: 1.125rem;
+$input-border-radius-sm: 10px;
+
+//large
+$input-height-lg: 6.25em;
+$input-width-lg: 34.5em;
+$input-padding-x-lg: 1.5rem;
+$input-font-size-lg: $font-size-lg;
+$input-line-height-lg: 1.25rem;
+$input-border-radius-lg: 10px;
+
+$input-disabled-bg: #f5f5f1;
+
+$input-color: $gray-500;
+$input-border-color: $border-color;
+$input-border-width: $border-width;
+
+$input-focus-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+
+$input-placeholder-color: $gray-500;
+$input-plaintext-color: $text-gray;
+
+$custom-checkbox-indicator-border-radius: $border-radius-sm;
+
+$custom-select-border-radius: $input-border-radius;
+$custom-select-focus-box-shadow: $input-focus-box-shadow;
+
+$custom-file-line-height: 1.5rem;
+
+//Auth page
+$auth-background: #EEF1F6;
+$auth-topic-color: #404852;
+$auth-description-color: #404852;
+
+// Animation for cards
+@keyframes animationEnter1 { from{ width: 100% } to { width: 110% } }
+@keyframes animationLeave1 { from{ width: 110% } to { width: 100% } }
+@keyframes animationEnter2 { from{ width: 100%; margin-left: 0; } to { width: 110%; margin-left: -3.33%; } }
+@keyframes animationLeave3 { from{ width: 110%; margin-left: -3.33%; } to { width: 100%; margin-left: 0; } }
+@keyframes animationEnter3 { from{ width: 100%; margin-left: 0; } to { width: 110%; margin-left: -6.66%; } }
+@keyframes animationLeave3 { from{ width: 110%; margin-left: -6.66%; } to { width: 100%; margin-left: 0; } }
+@keyframes animationEnter4 { from{ width: 100%; margin-left: 0; } to { width: 110%; margin-left: -10%; } }
+@keyframes animationLeave4 { from{ width: 110%; margin-left: -10%; } to { width: 100%; margin-left: 0; } }
+
+//// Dropdowns
+////
+//// Dropdown menu container and contents.
+//
+//$dropdown-border-radius: 5px;
+//$dropdown-link-hover-bg: $link-color;
+//$dropdown-divider-bg: rgba(0, 0, 0, 0.08);
+//$dropdown-font-size: 0.9375rem;
+//$dropdown-spacer: 0.5rem;
+//
+//// Pagination
+//
+//$pagination-padding-y: 0.65rem;
+//$pagination-padding-x: 0.911rem;
+//$pagination-padding-y-lg: 0.5rem;
+//$pagination-padding-x-lg: 1rem;
+//$pagination-padding-y-sm: 0.5rem;
+//$pagination-padding-x-sm: 0.75rem;
+//
+//// BreadCrumbs
+//$breadcrumb-divider: quote('>>');
+//
+//// Cards
+//$card-spacer-y: 1.5rem;
+//$card-spacer-x: 1.5rem;
+//
+////Alerts
+//
+//$alert-padding-y: 0.71rem;
+//$alert-padding-x: 0.71rem;
+//
+//// Nav tabs
+//
+//$nav-link-padding-y: 0.357rem;
+//$nav-link-padding-x: 0.5rem;
+//
+//// Tooltips
+//
+//$tooltip-bg: #323232;
+//$tooltip-padding-y: 0.4rem;
+//$tooltip-padding-x: 0.775rem;
+//$tooltip-font-size: 0.857rem;
+//$tooltip-border-radius: 0.428rem;
+//$tooltip-opacity: 1;
+//$tooltip-max-width: 220px;
+//$zindex-tooltip: 1032;
+//
+//// Popovers
+//
+//$popover-border-radius: 0.428rem;
+//$popover-header-bg: $gray-500;
+//$popover-font-size: 0.857rem;
+//
+//// Progress
+//
+//$progress-height: 0.357rem;
+//$progress-border-radius: 1.28rem;
+//
+//// Badges
+//
+//$badge-font-size: 80%;
+//$badge-padding-y: 0.4em;
+//$badge-padding-x: 0.4em;
+//$badge-border-radius: 0.25rem;
+//
+//// Code
+//
+//$code-font-size: 90% !default;
+//$kbd-bg: #eee;
+//
+//// Switch
+//$custom-switch-width: 3rem;
+//$custom-switch-indicator-border-radius: 0.857rem;
+//$custom-switch-indicator-size: 1.28rem;
+//
+
+// breakpoints
+$screen-sm: 40rem; // 640px
+$screen-md: 48rem; // 768px
+$screen-lg: 64rem; // 1024px
+$screen-xl: 80rem; // 1280px
+$screen-xxl: 90rem; //1440px

@@ -1,0 +1,27 @@
+.createEventsContainer {
+  padding: 40px;
+  background-color: #eef1f6;
+  height: 100vh;
+
+  .createEventWrapper {
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .createEventCard {
+      margin-top: 20px;
+      background: #ffffff;
+      width: 400px;
+      height: 200px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #f8f5f5;
+        transition: 0.3s ease-in;
+      }
+    }
+  }
+}

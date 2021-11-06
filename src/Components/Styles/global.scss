@@ -1,0 +1,95 @@
+@import "variables";
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: $font-default;
+	height: 100%;
+	#__next{
+		height: 100%;
+	}
+	a{
+		text-decoration: none;
+		color: inherit;
+	}
+	.hasXScrollBar{
+		&::-webkit-scrollbar {
+			height: 6px;
+		}
+		&::-webkit-scrollbar-track {
+			background: $gray-300;
+			border-radius: 8px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: $button-color;
+			border-radius: 8px;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background: $button-color;
+		}
+	}
+	.hasYScrollBar{
+		 &::-webkit-scrollbar {
+			 width: 5px;
+		 }
+		 &::-webkit-scrollbar-track {
+			 background: $gray-300;
+			 border-radius: 8px;
+		 }
+		 &::-webkit-scrollbar-thumb {
+			 background: $button-color;
+			 border-radius: 8px;
+		 }
+		 &::-webkit-scrollbar-thumb:hover {
+			 background: $button-color;
+		 }
+	 }
+	.PhoneInputCountry{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		width: 50%;
+		height: $input-height-sm;
+		select{
+			border-radius: 6px;
+			width: 60%;
+			height: 100%;
+			outline: none;
+			border: none;
+			padding: 0 10px;
+			font-size: $input-font-size-sm;
+			line-height: $input-line-height-sm;
+			&:hover,
+			&:focus-within {
+				border: 1px solid black;
+			}
+		}
+		.PhoneInputCountryIcon{
+			border-radius: 6px;
+			overflow: hidden;
+			width: 30%;
+			height: 100%;
+			margin: 0 5%;
+			display: flex;
+			align-items: center;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.PhoneInputInput{
+		border-radius: 6px;
+		width: 50%;
+		outline: none;
+		border: none;
+		box-shadow: 0 8px 25px 0 #0000001a;
+		padding: 0 $input-padding-x-sm;
+		font-size: $input-font-size-sm;
+		line-height: $input-line-height-sm;
+		&:hover,
+		&:focus-within {
+			border: 1px solid black;
+		}
+	}
+}

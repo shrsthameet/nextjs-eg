@@ -1,0 +1,38 @@
+@import "../Styles/variables";
+
+.answerCardWrapper{
+  background: $white;
+  height: 275px;
+  width: 240px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid $white;
+  box-sizing: border-box;
+  transition: 0.3s;
+  &:hover,
+  &.answerCardSelected{
+    border-color: $success;
+    .selectIconWrapper{
+      opacity: 1;
+    }
+  }
+  .selectIconWrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .answerCardAnswer{
+    font-family: $font-mulish;
+    font-size: $font-size-md;
+    font-weight: 600;
+    letter-spacing: 0.0025em;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}

@@ -1,0 +1,128 @@
+@import "../../Styles/variables";
+
+.notLoggedInHeaderWrapper{
+  height: 11vh;
+  background: $gray-200;
+  border-bottom: 1px solid $white;
+  width: 100%;
+  padding: 0 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  .headerLeftSide{
+    height: 100%;
+    width: 27.5%;
+    a{
+      height: 70%;
+      margin-right: 40px;
+      svg{
+        height: 100%;
+      }
+    }
+    button{
+      font-weight: normal;
+      svg{
+        height: 8px;
+      }
+    }
+  }
+  .searchWrapper{
+    border-radius: 12px;
+    border: 2px solid #9A9A9A !important;
+    width: 45%;
+    height: 60px;
+    .searchIconWrapper{
+      min-width: 50px;
+      width: 7%;
+      max-width: 65px;
+    }
+    .searchFilterWrapper{
+      min-width: 80px;
+      width: 11%;
+      max-width: 120px;
+      color: #9A9A9A;
+      border-left: 1px solid #9A9A9A;
+      height: 36px;
+      font-size: 14px;
+      font-weight: 700;
+      svg{
+        margin-left: 13px;
+      }
+    }
+    .searchInputWrapper{
+      background: transparent;
+      box-shadow: none;
+      width: 82%;
+      &:hover,
+      &:focus-within{
+        border: none;
+      }
+      .searchInput{
+        background: transparent;
+        border-radius: 10px 0 0 10px;
+        font-size: 14px;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+  .headerRightSide{
+    width: 27.5%;
+    button{
+      font-weight: normal;
+      min-width: initial;
+      svg{
+        height: 8px;
+      }
+    }
+    span{
+      cursor: pointer;
+    }
+    .headerRightNotificationIcon{
+      display: flex;
+      align-items: center;
+      margin: 0 30px;
+    }
+    .headerRightDropDownWrapper{
+      position: relative;
+      &:hover{
+        .headerRightDropDownContent{
+          height: 260px;
+        }
+      }
+      .headerRightProfileImage{
+        position: relative;
+        height: 50px;
+        width: 50px;
+        border-radius: 500px;
+        overflow: hidden;
+      }
+      .headerRightDropDownContent{
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s height;
+        position: absolute;
+        background-color: $white;
+        border-radius: 10px;
+        right: 0;
+        margin-top: 10px;
+        box-shadow: $shadow-base;
+        .headerRightDropDownContentItem{
+          width: 350px;
+          height: 65px;
+          padding-left: 40px;
+          box-sizing: border-box;
+          font-size: $font-size-lg;
+          color: $text-gray;
+          letter-spacing: 0.3px;
+          cursor: pointer;
+          div:hover,
+          a:hover{
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+

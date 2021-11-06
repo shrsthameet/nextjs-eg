@@ -1,0 +1,19 @@
+@import "src/Components/Styles/variables";
+
+.landingPageWrapper{
+  width: 100%;
+  height: 100%;
+  &.landingPageOverflowHidden{
+    overflow: hidden;
+    .landingPageContent{
+      height: 85vh;
+    }
+  }
+  .landingPageContent{
+    min-height: 85vh;
+    margin-top: 11vh;
+    padding-top: 4vh;
+    overflow-x: hidden;
+    background: $auth-background;
+  }
+}

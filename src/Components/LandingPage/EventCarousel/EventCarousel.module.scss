@@ -1,0 +1,134 @@
+@import "src/Components/Styles/variables";
+
+.eventCarouselWrapper{
+  padding: $common-padding;
+  width: 100%;
+  overflow: hidden;
+  .eventCarouselTitle{
+    color: $text-gray;
+  }
+  .eventCarouselContentWrapper{
+    color: $white;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    &.mouseActionEnter1{ animation: animationEnter1 0.5s ease-out forwards }
+    &.mouseActionEnter2{ animation: animationEnter2 0.5s ease-out forwards }
+    &.mouseActionEnter3{ animation: animationEnter3 0.5s ease-out forwards }
+    &.mouseActionEnter4{ animation: animationEnter4 0.5s ease-out forwards }
+    &.mouseActionLeave1{ animation: animationLeave1 0.5s ease-out forwards }
+    &.mouseActionLeave2{ animation: animationLeave2 0.5s ease-out forwards }
+    &.mouseActionLeave3{ animation: animationLeave3 0.5s ease-out forwards }
+    &.mouseActionLeave4{ animation: animationLeave4 0.5s ease-out forwards }
+    .eventCardWrapper{
+      height: 500px;
+      width: 23.5%;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.5s;
+      &:hover{
+        width: 33.5%;
+        .eventCardBlur{
+          height: 50%;
+        }
+        .eventCardContentWrapper{
+          height: 50%;
+          .eventCardTagDateWrapper{
+            .eventCardDate{
+              transition: 0.5s;
+              transition-delay: 0.5s;
+              opacity: 1;
+            }
+          }
+          .eventCardInfoWrapper{
+            transition: 0.5s;
+            transition-delay: 0.5s;
+            opacity: 1;
+          }
+          .eventCardButtonWrapper {
+            transition: 0.5s;
+            transition-delay: 0.5s;
+            opacity: 1;
+          }
+        }
+      }
+      .eventCardBlur{
+        width: 100%;
+        height: 36%;
+        position: absolute;
+        bottom: 0;
+        background: rgba(51, 119, 255, 0.5);
+        backdrop-filter: blur(24px);
+        transition: 0.5s;
+      }
+      &.notLastCard{
+        margin-right: 2%;
+      }
+      .eventCardContentWrapper{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: transparentize($button-color, 0.5);
+        padding: 22px;
+        height: 36%;
+        transition: 0.5s;
+        .eventCardTitle{
+          margin: 0;
+        }
+        .eventCardTagDateWrapper{
+          margin-bottom: 10px;
+          .eventCardTag {
+            background: transparentize($white, 0.75);
+            padding: 8px 15px;
+            border-radius: 10px;
+            border: 1px solid transparentize($white, 0.25);
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 20px;
+            background-blend-mode: overlay, normal;
+          }
+          .eventCardDate{
+            margin: 0;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            svg{
+              margin-right: 10px;
+            }
+          }
+        }
+        .eventCardInfoWrapper{
+          opacity: 0;
+          p{
+            display: flex;
+            align-items: flex-start;
+            margin-right: 20px;
+            &>span{
+              margin-right: 5px;
+            }
+            svg{
+              margin-right: 5px;
+              height: 18px;
+            }
+          }
+        }
+        .eventCardButtonWrapper{
+          opacity: 0;
+          button{
+            border: 1px solid $white;
+            color: $white;
+            font-size: $font-size-base;
+            padding: 0.5rem 1rem;
+            min-width: inherit;
+            margin-right: 20px;
+            font-weight: normal;
+            svg{
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

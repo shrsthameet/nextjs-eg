@@ -1,0 +1,77 @@
+@import "src/Components/Styles/variables";
+
+.profileSocialMediaWrapper{
+  .profileSocialMedia{
+    background: $white;
+    height: $font-size-xxl;
+    width: $font-size-xxl;
+    border-radius: 100px;
+    box-shadow: $shadow-base;
+    cursor: pointer;
+    margin-right: 20px;
+    border: 2px solid $white;
+    transition: 0.5s;
+    &.profileSocialMediaHideButton{
+      transform: rotate(45deg);
+      &:hover{
+        border-color: $danger;
+      }
+    }
+    svg{
+      width: 40%;
+      height: 40%;
+    }
+    &:hover{
+      border-color: $button-color;
+    }
+  }
+  .profileSocialMediaAddWrapper{
+    width: 100%;
+    animation: hideAdd linear 0.5s forwards;
+    &.profileSocialMediaAddShow{
+      animation: showAdd linear 0.5s forwards;
+    }
+    @keyframes showAdd {
+      0% {
+        display: none;
+        height: 0;
+        overflow: hidden;
+      }
+      25% { display: block; }
+      75% { height: 200px; }
+      100%{ overflow: visible; }
+    }
+    @keyframes hideAdd {
+      0% {
+        display: block;
+        height: 200px;
+        overflow: visible;
+      }
+      25% { overflow: hidden; }
+      75% {
+        overflow: hidden;
+        height: 0;
+      }
+      100%{
+        overflow: hidden;
+        height: 0;
+        display: none;
+      }
+    }
+    .profileSocialMediaSelInpWrapper{
+      width: 100%;
+      margin-right: 20px;
+      height: 140px;
+      .profileSocialMediaDisplayName{
+        height: 60px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .profileSocialMediaButton{
+      min-width: inherit;
+      min-height: 60px;
+    }
+  }
+}

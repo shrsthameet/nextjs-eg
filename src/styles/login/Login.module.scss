@@ -1,0 +1,20 @@
+@import "../../Components/Styles/variables";
+
+.helpingLinksWrapper{
+  margin-top: 50px;
+  p{
+    font-size: $font-size-md;
+    margin: 0.5rem;
+  }
+  .helpingRegister{
+    color: $text-gray;
+    a{
+      font-weight: 700;
+    }
+  }
+  .helpingForgotPass{
+    a{
+      color: $gray-600;
+    }
+  }
+}

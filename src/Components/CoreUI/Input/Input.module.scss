@@ -1,0 +1,146 @@
+@import "src/Components/Styles/variables";
+
+.inputWrapper {
+  background: $white;
+  box-shadow: 0 8px 25px 0 #0000001a;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &.textAreaWrapper{
+    padding: 20px 0;
+    textarea{
+      resize: none;
+      outline: none;
+    }
+  }
+  &.selectOptionWrapper{
+    select{
+      background-color: transparent;
+    }
+  }
+  &:hover,
+  &:focus-within {
+    border: 1px solid black;
+  }
+  &.small {
+    height: $input-height-sm;
+    &.textAreaWrapper{
+      height: 150px;
+    }
+    border-radius: $input-border-radius-sm;
+    .inputFieldWrapper {
+      .inputField {
+        padding: 0 $input-padding-x-sm;
+        font-size: $input-font-size-sm;
+        line-height: $input-line-height-sm;
+      }
+      .eyeWrapper {
+        font-size: $input-font-size-sm;
+      }
+    }
+  }
+
+  &.medium {
+    height: $input-height;
+    &.textAreaWrapper{
+      height: 175px;
+    }
+    border-radius: $input-border-radius;
+    .inputFieldWrapper {
+      .inputField {
+        padding: 0 $input-padding-x;
+        font-size: $input-font-size;
+        line-height: $input-line-height;
+      }
+      .eyeWrapper {
+        font-size: $input-font-size;
+      }
+    }
+  }
+
+  &.large {
+    height: $input-height-lg;
+    &.textAreaWrapper{
+      height: 200px;
+    }
+    border-radius: $input-border-radius-lg;
+    .inputFieldWrapper {
+      .inputField {
+        padding: 0 $input-padding-x-lg;
+        font-size: $input-font-size-lg;
+        line-height: $input-line-height-lg;
+      }
+      .eyeWrapper {
+        font-size: $input-font-size-lg;
+      }
+    }
+  }
+  .inputFieldWrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .inputField {
+      border: none;
+      color: $input-plaintext-color;
+      font-weight: 500;
+      padding: 0;
+      height: 100%;
+      width: 90%;
+      &.hasNoIcon {
+        width: 100%;
+      }
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active,
+      &:-webkit-autofill:focus-within {
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+        background-color: $white !important;
+        color: $input-plaintext-color !important;
+      }
+      &:hover,
+      &:focus-within {
+        outline: none;
+        border: none;
+      }
+    }
+    .inputIconWrapper {
+      height: 100%;
+      &.searchWrapper {
+        width: 10%;
+        background: $gray-400;
+        cursor: pointer;
+        &:hover {
+          background: darken($gray-400, 10);
+        }
+      }
+      &.eyeWrapper {
+        color: $input-plaintext-color;
+        font-weight: 500;
+        width: 10%;
+        i {
+          cursor: pointer;
+          &:hover {
+            color: darken($input-plaintext-color, 10);
+          }
+        }
+      }
+    }
+  }
+  ::placeholder {
+    color: $input-placeholder-color;
+  }
+  .inputError {
+    position: absolute;
+    color: red;
+    bottom: 8px;
+    left: 0;
+    padding: 0 1.25rem;
+    font-size: 11px;
+    font-family: $font-roboto;
+    word-break: break-word;
+    max-height: 13px;
+    overflow: hidden;
+    text-align: left;
+  }
+}

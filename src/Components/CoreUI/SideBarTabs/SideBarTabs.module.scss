@@ -1,0 +1,25 @@
+@import "src/Components/Styles/variables";
+
+.profileUserNavWrapper{
+  width: 100%;
+  background: $auth-background;
+  border-radius: 10px;
+  box-shadow: $shadow-base;
+  margin-top: 20px;
+  padding: 30px 0;
+  z-index: 1;
+  .profileUserNav{
+    font-size: $font-size-md;
+    line-height: 40px;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &.profileUserNavActive,
+    &:hover{
+      font-weight: 700;
+      color: $button-color;
+      border-left: 3px solid $button-color;
+      padding-left: 21px;
+    }
+  }
+}

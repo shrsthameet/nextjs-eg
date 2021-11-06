@@ -1,0 +1,81 @@
+@import "src/Components/Styles/variables";
+
+.uploadWrapper{
+  .fileInput{
+    display: none;
+    position: fixed;
+    left: -9999px;
+    top: -9999px;
+  }
+  .uploadImage{
+    height: 90px;
+    width: 90px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+    border: 1px solid $white;
+    box-sizing: border-box;
+  }
+  .uploadButtonWrapper{
+    .uploadButton{
+      padding: 12px 20px;
+      min-width: inherit;
+      min-height: inherit;
+      font-size: $font-size-sm;
+      margin: 0 15px 0 0;
+      border-radius: 5px;
+      letter-spacing: 0.2px;
+    }
+    .uploadFileName{
+      font-size: $font-size-sm;
+      color: $gray-600;
+      font-weight: 600;
+      margin: 0;
+    }
+    .uploadCriteria{
+      font-size: $font-size-sm;
+      color: $gray-600;
+      margin: 10px 0 0 0;
+    }
+  }
+  .uploadErrorText{
+    color: $danger;
+  }
+  .uploadModalWrapperStyle{
+    min-height: inherit;
+    .uploadModalBodyStyle{
+      background-color: lighten($button-color, 5);
+      padding: 33px !important;
+      border-radius: 10px;
+      .uploadModalContentWrapper{
+        border: 1px dashed $white;
+        border-radius: 10px;
+        padding: 20px;
+        &.uploadModalContentHighlight{
+          border-width: 2px;
+        }
+        .uploadModalIcon{
+          margin-bottom: 20px;
+          svg{
+            width: 50px;
+          }
+        }
+        .uploadModalLabels{
+          color: $white;
+          font-size: 14px;
+          margin: 0 0 10px 0;
+        }
+        .uploadModalButton{
+          background-color: $white;
+          color: $button-color;
+          min-width: inherit;
+          min-height: inherit;
+          padding: 10px 20px;
+          font-size: 14px;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+}

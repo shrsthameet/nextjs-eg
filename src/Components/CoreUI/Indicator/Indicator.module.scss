@@ -1,0 +1,69 @@
+@import "../../Styles/variables";
+
+.indicatorWrapper{
+  position: absolute;
+  &.bottomLeft{
+    bottom: 60px;
+    left: 133px;
+  }
+  &.bottomRight{
+    bottom: 60px;
+    right: 66.5px;
+  }
+  &.indRow{
+    .indicator{
+      &.small{
+        margin-right: 7px;
+        &.indicatorActive{
+          width: 27px;
+        }
+      }
+      &.medium{
+        margin-right: 10px;
+        &.indicatorActive{
+          width: 38px;
+        }
+      }
+      &.large{
+        margin-right: 13px;
+        &.indicatorActive{
+          width: 49px;
+        }
+      }
+    }
+  }
+  &.indCol{
+    .indicator{
+      &.small{
+        margin-bottom: 7px;
+      }
+      &.medium{
+        margin-bottom: 10px;
+      }
+      &.large{
+        margin-bottom: 13px;
+      }
+    }
+  }
+  .indicator{
+    border-radius: 50px;
+    background-color: $gray-400;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+    &.small{
+      height: 7px;
+      width: 7px;
+    }
+    &.medium{
+      height: 10px;
+      width: 10px;
+    }
+    &.large{
+      height: 13px;
+      width: 13px;
+    }
+    &.indicatorActive{
+      background-color: $button-color;
+    }
+  }
+}

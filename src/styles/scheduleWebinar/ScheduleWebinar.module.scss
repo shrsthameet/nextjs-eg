@@ -1,0 +1,284 @@
+@import "src/Components/Styles/variables";
+
+.wrapper {
+  height: 100%;
+  background-color: #eef1f6;
+
+  .scheduleSection {
+    flex: 8;
+    padding: 40px;
+
+    h4,
+    p {
+      font-weight: bolder;
+      color: rgba(64, 72, 82, 1);
+    }
+
+    .inputFieldStyle {
+      margin-bottom: 20px;
+    }
+
+    .formStyle {
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        color: rgba(64, 72, 82, 1);
+        letter-spacing: 0.04rem;
+      }
+
+      .inputFieldWrapper {
+        width: 520px;
+        height: 60px;
+      }
+
+      i {
+        margin: 10;
+      }
+
+      textarea {
+        padding-top: 20px !important;
+        width: 500px;
+        height: $input-height-sm;
+        border-radius: $input-border-radius-sm;
+        background: $white;
+        outline: none;
+        border: none;
+        padding: 0 $input-padding-x-sm;
+        font-size: $input-font-size-sm;
+        line-height: $input-line-height-sm;
+        font-family: arial, Helvetica, sans-serif;
+        color: $input-placeholder-color;
+
+        &:hover,
+        &:focus-within {
+          border: 1px solid black;
+        }
+      }
+
+      .moderatorInput {
+        width: 540px;
+        height: 80px;
+        border-radius: $input-border-radius-sm;
+        background: $white;
+        outline: none;
+        border: none;
+        padding: 0 $input-padding-x-sm;
+        font-size: $input-font-size-sm;
+        line-height: $input-line-height-sm;
+        font-family: arial, Helvetica, sans-serif;
+        color: $input-placeholder-color;
+
+        &:hover,
+        &:focus-within {
+          border: 1px solid black;
+        }
+      }
+
+      .badge {
+        background-color: #ffffff;
+        padding: 5px 15px 5px 15px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .speakerInput {
+        position: relative;
+        width: 500px;
+        height: 60px;
+        border-radius: $input-border-radius-sm;
+        background: $white;
+        outline: none;
+        border: none;
+        padding: 0 $input-padding-x-sm;
+        font-size: $input-font-size-sm;
+        line-height: $input-line-height-sm;
+        font-family: arial, Helvetica, sans-serif;
+        color: $input-placeholder-color;
+
+        input {
+          position: absolute;
+          width: 500px;
+          height: 60px;
+          border: none;
+          left: 0;
+          outline: none;
+          border-radius: $input-border-radius-sm;
+          padding: 0 $input-padding-x-sm;
+          &:hover,
+          &:focus-within {
+            border: 1px solid black;
+          }
+        }
+
+        .addSpeakerButton {
+          position: absolute;
+          top: 10px;
+          right: 50px;
+          font-size: 13px;
+
+          &:hover {
+            color: #0275d8;
+            cursor: pointer;
+          }
+        }
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .customFileUpload {
+        border: 1px dashed #ccc;
+        display: inline-block;
+        padding: 30px 70px 30px 70px;
+        cursor: pointer;
+        color: $input-placeholder-color;
+        font-size: 12px;
+      }
+
+      input[type="date"] {
+        height: $input-height-sm;
+        width: 240px;
+        box-shadow: 0 8px 25px 0 #0000001a;
+        background: $white;
+        outline: none;
+        border-radius: $input-border-radius-sm !important;
+        border: none !important;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 30px;
+        font-family: arial, Helvetica, sans-serif;
+        &:hover,
+        &:focus-within {
+          border: 1px solid black !important;
+        }
+      }
+
+      input[type="time"] {
+        height: $input-height-sm;
+        width: 240px;
+        box-shadow: 0 8px 25px 0 #0000001a;
+        background: $white;
+        outline: none;
+        border-radius: $input-border-radius-sm !important;
+        border: none !important;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 30px;
+        font-family: arial, Helvetica, sans-serif;
+        &:hover,
+        &:focus-within {
+          border: 1px solid black !important;
+        }
+      }
+
+      select {
+        height: $input-height-sm;
+        width: 270px;
+        outline: none;
+        margin-right: 30px;
+        box-shadow: 0 8px 25px 0 #0000001a;
+        background: $white;
+        padding-left: 15px;
+        border-radius: $input-border-radius-sm !important;
+        border: none !important;
+        &:hover,
+        &:focus-within {
+          border: 1px solid black !important;
+        }
+      }
+
+      .executionInput {
+        width: 270px;
+        height: 60px;
+        border-radius: $input-border-radius-sm;
+        background: $white;
+        outline: none;
+        border: none;
+        font-size: $input-font-size-sm;
+        line-height: $input-line-height-sm;
+        font-family: arial, Helvetica, sans-serif;
+        color: $input-placeholder-color;
+
+        &:hover,
+        &:focus-within {
+          border: 1px solid black;
+        }
+      }
+
+      input[type="checkbox"]:before {
+        height: 15px;
+        width: 15px;
+      }
+
+      input[type="checkbox"]:checked:after {
+        height: 15px;
+        width: 15px;
+        background-color: rosybrown !important;
+      }
+
+      & > button {
+        margin-top: 40px;
+      }
+      ::placeholder {
+        color: $input-placeholder-color !important;
+        font-size: 14px;
+      }
+
+      .buttonContainer {
+        width: 540px !important;
+      }
+
+      .timeZoneStyle {
+        width: 570px;
+      }
+
+      h6 {
+        margin: 40px 0 0 0;
+      }
+
+      .joinEventSection {
+        width: 110%;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .progressBarSection {
+    flex: 6;
+    height: 100%;
+    position: relative;
+
+    .progressBarDivision {
+      position: absolute;
+      background-color: #ffffff;
+      height: 90%;
+      width: 80%;
+      bottom: 0;
+
+      .progressBarStyle {
+        top: 60px;
+        position: absolute;
+      }
+
+      .stepInfo {
+        position: absolute;
+        bottom: 10px;
+        padding: 20px;
+        width: 100%;
+
+        p {
+          color: #404852;
+        }
+      }
+    }
+  }
+}
